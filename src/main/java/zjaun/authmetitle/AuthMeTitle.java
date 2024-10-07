@@ -121,7 +121,7 @@ public class AuthMeTitle extends JavaPlugin implements Listener {
 
     private String mainTitle(String playerName, List<String> messages) {
         Random random = new Random();
-        String mainTitle = (messages.size() == 0) ? "WELCOME, " + playerName : messages.get(random.nextInt(messages.size())).replace("name", playerName);
+        String mainTitle = (messages.size() == 0) ? "欢迎, " + playerName : messages.get(random.nextInt(messages.size())).replace("name", playerName);
         return mainTitle;
     } 
 
@@ -133,21 +133,21 @@ public class AuthMeTitle extends JavaPlugin implements Listener {
                 if (messages.size() != 0) {
                     subTitle = messages.get(random.nextInt(messages.size())).replace("name", playerName);
                 } else {
-                    subTitle = "Please register using /register";
+                    subTitle = "请使用/register指令注册";
                 }
             break;
             case "unauthedPlayer":
                 if (messages.size() != 0) {
                     subTitle = messages.get(random.nextInt(messages.size())).replace("name", playerName);
                 } else {
-                    subTitle = "Please login using /login";
+                    subTitle = "请使用/login指令登录";
                 }
             break;
             case "authedPlayer":
                 if (messages.size() != 0) {
                     subTitle = messages.get(random.nextInt(messages.size())).replace("name", playerName);
                 } else {
-                    subTitle = "Enjoy!";
+                    subTitle = "成功！";
                 }
             break;
         }
@@ -276,41 +276,41 @@ public class AuthMeTitle extends JavaPlugin implements Listener {
 
     public List<String> defaultUnauthedMessagesScreen() {
         List<String> messages = new ArrayList<>();
-        messages.add("Hello, name");
+        messages.add("你好, name");
         return messages;
     }
 
     public List<String> defaultUnauthedMessagesSubtitle() {
         List<String> messages = new ArrayList<>();
-        messages.add("Please login using /login");
+        messages.add("使用/login指令登录！");
         return messages;
     }
 
     public List<String> defaultUnregMessagesScreen() {
         List<String> messages = new ArrayList<>();
-        messages.add("Hello, name");
+        messages.add("欢迎, name");
         return messages;
     }
 
     public List<String> defaultUnregMessagesSubtitle() {
         List<String> messages = new ArrayList<>();
-        messages.add("Please register using /register");
+        messages.add("使用/register指令登录！");
         return messages;
     }
 
     public List<String> defaultAuthedMessagesScreen() {
         List<String> messages = new ArrayList<>();
-        messages.add("Hello, name");
+        messages.add("你好, name");
         return messages;
     }
 
     public List<String> defaultAuthedMessagesSubtitle() {
         List<String> messages = new ArrayList<>();
-        messages.add("Welcome aboard!");
-        messages.add("Stay kind, play fair!");
-        messages.add("Respect others, have fun!");
-        messages.add("Happy exploring!");
-        messages.add("Let the fun begin!");
+        messages.add("欢迎光～临！");
+        messages.add("保持友善，公平竞争！");
+        messages.add("尊重他人，玩得开心！");
+        messages.add("探索愉快！");
+        messages.add("让乐趣开始吧！");
         return messages;
     }
 
@@ -369,11 +369,11 @@ public class AuthMeTitle extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
         load();
         loadConfig();
-        getLogger().info("AuthMeTitle Loaded");
+        getLogger().info("AuthMeTitle-CN Loaded");
     }
 
     @Override
     public void onDisable() {
-        getLogger().info("AuthMeTitle Disabled");
+        getLogger().info("AuthMeTitle-CN Disabled");
     }
 }
