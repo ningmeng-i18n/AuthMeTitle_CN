@@ -1,6 +1,0 @@
-name: authmetitle_cn
-version: "1.0-SNAPSHOT"
-author: Zjaun,MengZe2
-main: zjaun.authmetitle.AuthMeTitle
-api-version: '1.20'
-soft-depend: [AuthMe]
